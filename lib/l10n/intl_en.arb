@@ -1,0 +1,8 @@
+{
+  "appTitle": "Provider Immutable State",
+  "homeViewTitle": "Home",
+  "homeViewId": "ID",
+  "homeViewCreated": "Created",
+  "homeViewFullName": "Full name",
+  "homeViewCount": "{howMany, plural, one{user loaded 1 time} other{user loaded {howMany} times}}"
+}

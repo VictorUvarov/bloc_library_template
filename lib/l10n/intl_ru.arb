@@ -1,0 +1,8 @@
+{
+  "appTitle": "Неизменный поставщик",
+  "homeViewTitle": "Дом",
+  "homeViewId": "Я БЫ",
+  "homeViewCreated": "созданный",
+  "homeViewFullName": "Полное имя",
+  "homeViewCount": "{howMany, plural, one{пользователь загружен 1 раз} other{пользователь загружен {howMany} раза}}"
+}
