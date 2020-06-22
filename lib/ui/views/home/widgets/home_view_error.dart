@@ -1,13 +1,8 @@
+import 'package:bloc_library_template/generated/l10n.dart';
 import 'package:flutter/material.dart';
 
 class HomeViewError extends StatelessWidget {
-  final String message;
-
-  const HomeViewError({
-    Key key,
-    @required this.message,
-  })  : assert(message != null),
-        super(key: key);
+  const HomeViewError({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +10,7 @@ class HomeViewError extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text('😡 $message'),
+          Text(S.of(context).homeViewError),
         ],
       ),
     );

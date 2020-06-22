@@ -1,12 +1,10 @@
 import 'dart:math' as math;
 
-import 'package:injectable/injectable.dart';
-import 'package:provider_immutable_state/core/exceptions/repository/repository_exception.dart';
-import 'package:provider_immutable_state/core/models/user/user.dart';
-import 'package:provider_immutable_state/core/repositories/users/users_repository.dart';
+import 'package:bloc_library_template/core/exceptions/repository/repository_exception.dart';
+import 'package:bloc_library_template/core/models/user/user.dart';
+import 'package:bloc_library_template/core/repositories/users/users_repository.dart';
 import 'package:uuid/uuid.dart';
 
-@LazySingleton(as: UsersRepository)
 class UsersRepositoryImpl implements UsersRepository {
   @override
   Future<User> currentUser() async {

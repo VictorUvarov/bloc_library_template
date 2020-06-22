@@ -1,13 +1,240 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
 
-part of 'home_view_state.dart';
+part of 'home_view_bloc.dart';
 
 // **************************************************************************
 // FreezedGenerator
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+class _$HomeViewEventTearOff {
+  const _$HomeViewEventTearOff();
+
+  _LoadUser loadUser() {
+    return const _LoadUser();
+  }
+
+  _ReloadUser reloadUser() {
+    return const _ReloadUser();
+  }
+}
+
+// ignore: unused_element
+const $HomeViewEvent = _$HomeViewEventTearOff();
+
+mixin _$HomeViewEvent {
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result loadUser(),
+    @required Result reloadUser(),
+  });
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result loadUser(),
+    Result reloadUser(),
+    @required Result orElse(),
+  });
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result loadUser(_LoadUser value),
+    @required Result reloadUser(_ReloadUser value),
+  });
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result loadUser(_LoadUser value),
+    Result reloadUser(_ReloadUser value),
+    @required Result orElse(),
+  });
+}
+
+abstract class $HomeViewEventCopyWith<$Res> {
+  factory $HomeViewEventCopyWith(
+          HomeViewEvent value, $Res Function(HomeViewEvent) then) =
+      _$HomeViewEventCopyWithImpl<$Res>;
+}
+
+class _$HomeViewEventCopyWithImpl<$Res>
+    implements $HomeViewEventCopyWith<$Res> {
+  _$HomeViewEventCopyWithImpl(this._value, this._then);
+
+  final HomeViewEvent _value;
+  // ignore: unused_field
+  final $Res Function(HomeViewEvent) _then;
+}
+
+abstract class _$LoadUserCopyWith<$Res> {
+  factory _$LoadUserCopyWith(_LoadUser value, $Res Function(_LoadUser) then) =
+      __$LoadUserCopyWithImpl<$Res>;
+}
+
+class __$LoadUserCopyWithImpl<$Res> extends _$HomeViewEventCopyWithImpl<$Res>
+    implements _$LoadUserCopyWith<$Res> {
+  __$LoadUserCopyWithImpl(_LoadUser _value, $Res Function(_LoadUser) _then)
+      : super(_value, (v) => _then(v as _LoadUser));
+
+  @override
+  _LoadUser get _value => super._value as _LoadUser;
+}
+
+class _$_LoadUser implements _LoadUser {
+  const _$_LoadUser();
+
+  @override
+  String toString() {
+    return 'HomeViewEvent.loadUser()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) || (other is _LoadUser);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result loadUser(),
+    @required Result reloadUser(),
+  }) {
+    assert(loadUser != null);
+    assert(reloadUser != null);
+    return loadUser();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result loadUser(),
+    Result reloadUser(),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (loadUser != null) {
+      return loadUser();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result loadUser(_LoadUser value),
+    @required Result reloadUser(_ReloadUser value),
+  }) {
+    assert(loadUser != null);
+    assert(reloadUser != null);
+    return loadUser(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result loadUser(_LoadUser value),
+    Result reloadUser(_ReloadUser value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (loadUser != null) {
+      return loadUser(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _LoadUser implements HomeViewEvent {
+  const factory _LoadUser() = _$_LoadUser;
+}
+
+abstract class _$ReloadUserCopyWith<$Res> {
+  factory _$ReloadUserCopyWith(
+          _ReloadUser value, $Res Function(_ReloadUser) then) =
+      __$ReloadUserCopyWithImpl<$Res>;
+}
+
+class __$ReloadUserCopyWithImpl<$Res> extends _$HomeViewEventCopyWithImpl<$Res>
+    implements _$ReloadUserCopyWith<$Res> {
+  __$ReloadUserCopyWithImpl(
+      _ReloadUser _value, $Res Function(_ReloadUser) _then)
+      : super(_value, (v) => _then(v as _ReloadUser));
+
+  @override
+  _ReloadUser get _value => super._value as _ReloadUser;
+}
+
+class _$_ReloadUser implements _ReloadUser {
+  const _$_ReloadUser();
+
+  @override
+  String toString() {
+    return 'HomeViewEvent.reloadUser()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) || (other is _ReloadUser);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result loadUser(),
+    @required Result reloadUser(),
+  }) {
+    assert(loadUser != null);
+    assert(reloadUser != null);
+    return reloadUser();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result loadUser(),
+    Result reloadUser(),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (reloadUser != null) {
+      return reloadUser();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result loadUser(_LoadUser value),
+    @required Result reloadUser(_ReloadUser value),
+  }) {
+    assert(loadUser != null);
+    assert(reloadUser != null);
+    return reloadUser(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result loadUser(_LoadUser value),
+    Result reloadUser(_ReloadUser value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (reloadUser != null) {
+      return reloadUser(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ReloadUser implements HomeViewEvent {
+  const factory _ReloadUser() = _$_ReloadUser;
+}
 
 class _$HomeViewStateTearOff {
   const _$HomeViewStateTearOff();
@@ -16,17 +243,14 @@ class _$HomeViewStateTearOff {
     return const _Loading();
   }
 
-  _Loaded loaded({@required User user, @required int count}) {
+  _Loaded loaded({@required User user}) {
     return _Loaded(
       user: user,
-      count: count,
     );
   }
 
-  _Error error(String message) {
-    return _Error(
-      message,
-    );
+  _Error error() {
+    return const _Error();
   }
 }
 
@@ -37,14 +261,14 @@ mixin _$HomeViewState {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result loading(),
-    @required Result loaded(User user, int count),
-    @required Result error(String message),
+    @required Result loaded(User user),
+    @required Result error(),
   });
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result loading(),
-    Result loaded(User user, int count),
-    Result error(String message),
+    Result loaded(User user),
+    Result error(),
     @required Result orElse(),
   });
   @optionalTypeArgs
@@ -111,8 +335,8 @@ class _$_Loading implements _Loading {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result loading(),
-    @required Result loaded(User user, int count),
-    @required Result error(String message),
+    @required Result loaded(User user),
+    @required Result error(),
   }) {
     assert(loading != null);
     assert(loaded != null);
@@ -124,8 +348,8 @@ class _$_Loading implements _Loading {
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result loading(),
-    Result loaded(User user, int count),
-    Result error(String message),
+    Result loaded(User user),
+    Result error(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -171,7 +395,7 @@ abstract class _Loading implements HomeViewState {
 abstract class _$LoadedCopyWith<$Res> {
   factory _$LoadedCopyWith(_Loaded value, $Res Function(_Loaded) then) =
       __$LoadedCopyWithImpl<$Res>;
-  $Res call({User user, int count});
+  $Res call({User user});
 
   $UserCopyWith<$Res> get user;
 }
@@ -187,11 +411,9 @@ class __$LoadedCopyWithImpl<$Res> extends _$HomeViewStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object user = freezed,
-    Object count = freezed,
   }) {
     return _then(_Loaded(
       user: user == freezed ? _value.user : user as User,
-      count: count == freezed ? _value.count : count as int,
     ));
   }
 
@@ -207,18 +429,14 @@ class __$LoadedCopyWithImpl<$Res> extends _$HomeViewStateCopyWithImpl<$Res>
 }
 
 class _$_Loaded implements _Loaded {
-  const _$_Loaded({@required this.user, @required this.count})
-      : assert(user != null),
-        assert(count != null);
+  const _$_Loaded({@required this.user}) : assert(user != null);
 
   @override
   final User user;
-  @override
-  final int count;
 
   @override
   String toString() {
-    return 'HomeViewState.loaded(user: $user, count: $count)';
+    return 'HomeViewState.loaded(user: $user)';
   }
 
   @override
@@ -226,16 +444,12 @@ class _$_Loaded implements _Loaded {
     return identical(this, other) ||
         (other is _Loaded &&
             (identical(other.user, user) ||
-                const DeepCollectionEquality().equals(other.user, user)) &&
-            (identical(other.count, count) ||
-                const DeepCollectionEquality().equals(other.count, count)));
+                const DeepCollectionEquality().equals(other.user, user)));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(user) ^
-      const DeepCollectionEquality().hash(count);
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(user);
 
   @override
   _$LoadedCopyWith<_Loaded> get copyWith =>
@@ -245,26 +459,26 @@ class _$_Loaded implements _Loaded {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result loading(),
-    @required Result loaded(User user, int count),
-    @required Result error(String message),
+    @required Result loaded(User user),
+    @required Result error(),
   }) {
     assert(loading != null);
     assert(loaded != null);
     assert(error != null);
-    return loaded(user, count);
+    return loaded(user);
   }
 
   @override
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result loading(),
-    Result loaded(User user, int count),
-    Result error(String message),
+    Result loaded(User user),
+    Result error(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
     if (loaded != null) {
-      return loaded(user, count);
+      return loaded(user);
     }
     return orElse();
   }
@@ -299,17 +513,15 @@ class _$_Loaded implements _Loaded {
 }
 
 abstract class _Loaded implements HomeViewState {
-  const factory _Loaded({@required User user, @required int count}) = _$_Loaded;
+  const factory _Loaded({@required User user}) = _$_Loaded;
 
   User get user;
-  int get count;
   _$LoadedCopyWith<_Loaded> get copyWith;
 }
 
 abstract class _$ErrorCopyWith<$Res> {
   factory _$ErrorCopyWith(_Error value, $Res Function(_Error) then) =
       __$ErrorCopyWithImpl<$Res>;
-  $Res call({String message});
 }
 
 class __$ErrorCopyWithImpl<$Res> extends _$HomeViewStateCopyWithImpl<$Res>
@@ -319,68 +531,48 @@ class __$ErrorCopyWithImpl<$Res> extends _$HomeViewStateCopyWithImpl<$Res>
 
   @override
   _Error get _value => super._value as _Error;
-
-  @override
-  $Res call({
-    Object message = freezed,
-  }) {
-    return _then(_Error(
-      message == freezed ? _value.message : message as String,
-    ));
-  }
 }
 
 class _$_Error implements _Error {
-  const _$_Error(this.message) : assert(message != null);
-
-  @override
-  final String message;
+  const _$_Error();
 
   @override
   String toString() {
-    return 'HomeViewState.error(message: $message)';
+    return 'HomeViewState.error()';
   }
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other is _Error &&
-            (identical(other.message, message) ||
-                const DeepCollectionEquality().equals(other.message, message)));
+    return identical(this, other) || (other is _Error);
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(message);
-
-  @override
-  _$ErrorCopyWith<_Error> get copyWith =>
-      __$ErrorCopyWithImpl<_Error>(this, _$identity);
+  int get hashCode => runtimeType.hashCode;
 
   @override
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result loading(),
-    @required Result loaded(User user, int count),
-    @required Result error(String message),
+    @required Result loaded(User user),
+    @required Result error(),
   }) {
     assert(loading != null);
     assert(loaded != null);
     assert(error != null);
-    return error(message);
+    return error();
   }
 
   @override
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result loading(),
-    Result loaded(User user, int count),
-    Result error(String message),
+    Result loaded(User user),
+    Result error(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
     if (error != null) {
-      return error(message);
+      return error();
     }
     return orElse();
   }
@@ -415,8 +607,5 @@ class _$_Error implements _Error {
 }
 
 abstract class _Error implements HomeViewState {
-  const factory _Error(String message) = _$_Error;
-
-  String get message;
-  _$ErrorCopyWith<_Error> get copyWith;
+  const factory _Error() = _$_Error;
 }

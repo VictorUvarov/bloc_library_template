@@ -26,6 +26,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "appTitle" : MessageLookupByLibrary.simpleMessage("Неизменный поставщик"),
     "homeViewCount" : m0,
     "homeViewCreated" : MessageLookupByLibrary.simpleMessage("созданный"),
+    "homeViewError" : MessageLookupByLibrary.simpleMessage("Ошибка при загрузке пользователя"),
     "homeViewFullName" : MessageLookupByLibrary.simpleMessage("Полное имя"),
     "homeViewId" : MessageLookupByLibrary.simpleMessage("Я БЫ"),
     "homeViewTitle" : MessageLookupByLibrary.simpleMessage("Дом")

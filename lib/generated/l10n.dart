@@ -94,6 +94,16 @@ class S {
       args: [howMany],
     );
   }
+
+  /// `Error loading user`
+  String get homeViewError {
+    return Intl.message(
+      'Error loading user',
+      name: 'homeViewError',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

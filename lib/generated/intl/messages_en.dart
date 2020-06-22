@@ -26,6 +26,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "appTitle" : MessageLookupByLibrary.simpleMessage("Provider Immutable State"),
     "homeViewCount" : m0,
     "homeViewCreated" : MessageLookupByLibrary.simpleMessage("Created"),
+    "homeViewError" : MessageLookupByLibrary.simpleMessage("Error loading user"),
     "homeViewFullName" : MessageLookupByLibrary.simpleMessage("Full name"),
     "homeViewId" : MessageLookupByLibrary.simpleMessage("ID"),
     "homeViewTitle" : MessageLookupByLibrary.simpleMessage("Home")

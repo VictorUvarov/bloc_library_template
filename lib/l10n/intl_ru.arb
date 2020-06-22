@@ -4,5 +4,6 @@
   "homeViewId": "Я БЫ",
   "homeViewCreated": "созданный",
   "homeViewFullName": "Полное имя",
-  "homeViewCount": "{howMany, plural, one{пользователь загружен 1 раз} other{пользователь загружен {howMany} раза}}"
+  "homeViewCount": "{howMany, plural, one{пользователь загружен 1 раз} other{пользователь загружен {howMany} раза}}",
+  "homeViewError": "Ошибка при загрузке пользователя"
 }
