@@ -18,7 +18,7 @@ class MockHomeViewBloc extends MockBloc<HomeViewEvent, HomeViewState>
 void main() {
   HomeViewBloc homeViewBloc;
 
-  setUpAll(() {
+  setUp(() {
     homeViewBloc = MockHomeViewBloc();
   });
 
@@ -29,10 +29,10 @@ void main() {
 
       await tester.pumpWidget(
         MaterialApp(
-          home: Scaffold(
-            body: BlocProvider.value(
-              value: homeViewBloc,
-              child: HomeViewContent(),
+          home: BlocProvider.value(
+            value: homeViewBloc,
+            child: Scaffold(
+              body: HomeViewContent(),
             ),
           ),
           localizationsDelegates: [
@@ -48,16 +48,15 @@ void main() {
       expect(find.byKey(WidgetKeys.error), findsNothing);
     });
     testWidgets('shows loaded view when HomeViewState.loaded', (tester) async {
-      when(homeViewBloc.state).thenReturn(
-        HomeViewState.loaded(user: MOCK_USER),
-      );
+      when(homeViewBloc.state)
+          .thenReturn(HomeViewState.loaded(user: MOCK_USER));
 
       await tester.pumpWidget(
         MaterialApp(
-          home: Scaffold(
-            body: BlocProvider.value(
-              value: homeViewBloc,
-              child: HomeViewContent(),
+          home: BlocProvider.value(
+            value: homeViewBloc,
+            child: Scaffold(
+              body: HomeViewContent(),
             ),
           ),
           localizationsDelegates: [
@@ -68,6 +67,7 @@ void main() {
         ),
       );
       await tester.pump();
+
       expect(find.byKey(WidgetKeys.loading), findsNothing);
       expect(find.byKey(WidgetKeys.loaded), findsOneWidget);
       expect(find.byKey(WidgetKeys.error), findsNothing);
@@ -78,10 +78,10 @@ void main() {
 
       await tester.pumpWidget(
         MaterialApp(
-          home: Scaffold(
-            body: BlocProvider.value(
-              value: homeViewBloc,
-              child: HomeViewContent(),
+          home: BlocProvider.value(
+            value: homeViewBloc,
+            child: Scaffold(
+              body: HomeViewContent(),
             ),
           ),
           localizationsDelegates: [
@@ -124,7 +124,7 @@ void main() {
       expect(refreshButton, findsOneWidget);
 
       await tester.tap(refreshButton);
-      await tester.pumpAndSettle();
+      await tester.pump();
 
       verify(homeViewBloc.add(HomeViewEvent.reloadUser())).called(1);
     });
