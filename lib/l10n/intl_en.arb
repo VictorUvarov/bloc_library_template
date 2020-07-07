@@ -5,5 +5,6 @@
   "homeViewCreated": "Created",
   "homeViewFullName": "Full name",
   "homeViewCount": "{howMany, plural, one{user loaded 1 time} other{user loaded {howMany} times}}",
-  "homeViewError": "Error loading user"
+  "homeViewError": "Error loading user",
+  "detailsViewTitle": "Details"
 }

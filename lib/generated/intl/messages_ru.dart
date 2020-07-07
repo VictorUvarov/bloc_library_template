@@ -24,6 +24,7 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function> {
     "appTitle" : MessageLookupByLibrary.simpleMessage("Неизменный поставщик"),
+    "detailsViewTitle" : MessageLookupByLibrary.simpleMessage("подробности"),
     "homeViewCount" : m0,
     "homeViewCreated" : MessageLookupByLibrary.simpleMessage("созданный"),
     "homeViewError" : MessageLookupByLibrary.simpleMessage("Ошибка при загрузке пользователя"),

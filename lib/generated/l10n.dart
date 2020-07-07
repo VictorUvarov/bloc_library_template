@@ -104,6 +104,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Details`
+  String get detailsViewTitle {
+    return Intl.message(
+      'Details',
+      name: 'detailsViewTitle',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

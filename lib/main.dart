@@ -1,7 +1,9 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:bloc_library_template/app_delegate.dart';
 import 'package:bloc_library_template/generated/l10n.dart';
 import 'package:bloc_library_template/locator.dart';
 import 'package:bloc_library_template/logger.dart';
+import 'package:bloc_library_template/ui/router.gr.dart';
 import 'package:bloc_library_template/ui/shared/themes.dart';
 import 'package:bloc_library_template/ui/views/home/home_view.dart';
 import 'package:flutter/material.dart';
@@ -30,6 +32,7 @@ class MyApp extends StatelessWidget {
         GlobalCupertinoLocalizations.delegate,
       ],
       supportedLocales: S.delegate.supportedLocales,
+      builder: ExtendedNavigator<Router>(router: Router()),
     );
   }
 }

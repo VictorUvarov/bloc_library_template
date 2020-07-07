@@ -24,6 +24,7 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function> {
     "appTitle" : MessageLookupByLibrary.simpleMessage("Provider Immutable State"),
+    "detailsViewTitle" : MessageLookupByLibrary.simpleMessage("Details"),
     "homeViewCount" : m0,
     "homeViewCreated" : MessageLookupByLibrary.simpleMessage("Created"),
     "homeViewError" : MessageLookupByLibrary.simpleMessage("Error loading user"),

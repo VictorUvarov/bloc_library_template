@@ -5,5 +5,6 @@
   "homeViewCreated": "созданный",
   "homeViewFullName": "Полное имя",
   "homeViewCount": "{howMany, plural, one{пользователь загружен 1 раз} other{пользователь загружен {howMany} раза}}",
-  "homeViewError": "Ошибка при загрузке пользователя"
+  "homeViewError": "Ошибка при загрузке пользователя",
+  "detailsViewTitle": "подробности"
 }
