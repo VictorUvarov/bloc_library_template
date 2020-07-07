@@ -1,7 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:logging/logging.dart';
 
-class AppBlocDelegate extends BlocDelegate {
+class AppBlocObserver extends BlocObserver {
   final log = Logger('AppBlocDelegate');
 
   @override

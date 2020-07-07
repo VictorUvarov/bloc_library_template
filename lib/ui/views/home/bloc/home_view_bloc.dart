@@ -16,10 +16,8 @@ class HomeViewBloc extends Bloc<HomeViewEvent, HomeViewState> {
 
   HomeViewBloc({
     @required UsersRepository usersRepository,
-  }) : _usersRepository = usersRepository;
-
-  @override
-  HomeViewState get initialState => HomeViewState.loading();
+  })  : _usersRepository = usersRepository,
+        super(HomeViewState.loading());
 
   @override
   Stream<HomeViewState> mapEventToState(

@@ -11,7 +11,7 @@ import 'package:provider/provider.dart';
 
 void main() {
   setupLogger();
-  BlocSupervisor.delegate = AppBlocDelegate();
+  Bloc.observer = AppBlocObserver();
   runApp(MyApp());
 }
 
