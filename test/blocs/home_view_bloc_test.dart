@@ -1,7 +1,7 @@
 import 'package:bloc_library_template/core/exceptions/repository/repository_exception.dart';
 import 'package:bloc_library_template/core/repositories/users/users_repository.dart';
+import 'package:bloc_library_template/locator.dart';
 import 'package:bloc_library_template/ui/views/home/bloc/home_view_bloc.dart';
-import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 
@@ -13,43 +13,48 @@ void main() {
   UsersRepository usersRepository;
   HomeViewBloc homeViewBloc;
 
-  setUp(() {
+  setUpAll(() {
     usersRepository = MockUsersRepository();
-    when(usersRepository.currentUser()).thenAnswer((_) async => MOCK_USER);
-    homeViewBloc = HomeViewBloc(usersRepository: usersRepository);
+    locator.registerSingleton<UsersRepository>(usersRepository);
+    homeViewBloc = HomeViewBloc();
   });
 
   group('HomeViewBloc', () {
-    blocTest<HomeViewBloc, HomeViewEvent, HomeViewState>(
+    test(
       'emits [HomeViewState.loading, HomeViewState.loaded] when HomeViewEvent.reloadUser is added successfully ',
-      build: () async {
-        return homeViewBloc;
+      () {
+        // arrange
+        when(usersRepository.currentUser()).thenAnswer((_) async => MOCK_USER);
+
+        // assert later
+        final expected = [
+          HomeViewState.loading(),
+          HomeViewState.loaded(user: MOCK_USER),
+        ];
+        expectLater(homeViewBloc, emitsInOrder(expected));
+
+        // act
+        homeViewBloc.add(HomeViewEvent.reloadUser());
       },
-      act: (bloc) async {
-        bloc.add(HomeViewEvent.reloadUser());
-      },
-      skip: 0, // since initial state is already HomeViewState.loading()
-      expect: <HomeViewState>[
-        HomeViewState.loading(),
-        HomeViewState.loaded(user: MOCK_USER),
-      ],
     );
 
-    blocTest<HomeViewBloc, HomeViewEvent, HomeViewState>(
+    test(
       'emits [HomeViewState.loading, HomeViewState.error] when HomeViewEvent.reloadUser is added ',
-      build: () async {
+      () {
+        // arrange
         when(usersRepository.currentUser())
             .thenThrow(RepositoryException.general());
-        return homeViewBloc;
+
+        // assert later
+        final expected = [
+          HomeViewState.loading(),
+          HomeViewState.error(),
+        ];
+        expectLater(homeViewBloc, emitsInOrder(expected));
+
+        // act
+        homeViewBloc.add(HomeViewEvent.reloadUser());
       },
-      act: (bloc) async {
-        bloc.add(HomeViewEvent.reloadUser());
-      },
-      skip: 0, // since initial state is already HomeViewState.loading()
-      expect: <HomeViewState>[
-        HomeViewState.loading(),
-        HomeViewState.error(),
-      ],
     );
   });
 }

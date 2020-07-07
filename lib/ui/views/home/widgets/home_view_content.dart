@@ -11,7 +11,7 @@ class HomeViewContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder(
+    return BlocBuilder<HomeViewBloc, HomeViewState>(
       bloc: context.bloc<HomeViewBloc>(),
       builder: (context, state) {
         return state.map(
