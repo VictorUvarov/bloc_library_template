@@ -2,7 +2,7 @@ import 'package:bloc/bloc.dart';
 import 'package:logging/logging.dart';
 
 class AppBlocObserver extends BlocObserver {
-  final log = Logger('AppBlocDelegate');
+  final log = Logger('');
 
   @override
   void onEvent(Bloc bloc, Object event) {
@@ -17,8 +17,8 @@ class AppBlocObserver extends BlocObserver {
   }
 
   @override
-  void onError(Bloc bloc, Object error, StackTrace stackTrace) {
-    log.severe('Bloc: $bloc, Error: $error, Trace: $stackTrace');
-    super.onError(bloc, error, stackTrace);
+  void onError(Cubit cubit, Object error, StackTrace stackTrace) {
+    log.severe('Cubit: $cubit, Error: $error, Trace: $stackTrace');
+    super.onError(cubit, error, stackTrace);
   }
 }

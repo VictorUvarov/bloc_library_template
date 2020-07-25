@@ -3,17 +3,14 @@ import 'package:bloc_library_template/generated/l10n.dart';
 import 'package:bloc_library_template/ui/views/home/bloc/home_view_bloc.dart';
 import 'package:bloc_library_template/ui/views/home/widgets/home_view_content.dart';
 import 'package:bloc_library_template/ui/views/home/widgets/home_view_refresh_button.dart';
-import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 
-import '../../data/mock.dart';
-
-class MockHomeViewBloc extends MockBloc<HomeViewEvent, HomeViewState>
-    implements HomeViewBloc {}
+import '../../mocks/blocs.dart';
+import '../../mocks/data.dart';
 
 void main() {
   HomeViewBloc homeViewBloc;
@@ -48,8 +45,7 @@ void main() {
       expect(find.byKey(WidgetKeys.error), findsNothing);
     });
     testWidgets('shows loaded view when HomeViewState.loaded', (tester) async {
-      when(homeViewBloc.state)
-          .thenReturn(HomeViewState.loaded(user: MOCK_USER));
+      when(homeViewBloc.state).thenReturn(HomeViewState.loaded(user: userMock));
 
       await tester.pumpWidget(
         MaterialApp(
@@ -100,8 +96,7 @@ void main() {
 
   group('RefreshButton', () {
     testWidgets('adds HomeViewEvent.reloadUser event to bloc', (tester) async {
-      when(homeViewBloc.state)
-          .thenReturn(HomeViewState.loaded(user: MOCK_USER));
+      when(homeViewBloc.state).thenReturn(HomeViewState.loaded(user: userMock));
 
       await tester.pumpWidget(
         MaterialApp(
