@@ -27,20 +27,19 @@ dependencies:
     sdk: flutter
 
   # State management
-  flutter_bloc: ^5.0.0
-  bloc: ^5.0.0
-  provider: ^4.1.3
+  flutter_bloc: ^6.0.1
+  bloc: ^6.0.1
 
   # Utilities
   logging: ^0.11.4
-  uuid: ^2.0.4
+  uuid: ^2.2.0
 
   # Service locators
-  injectable: ^0.4.0+1
-  get_it: ^4.0.2
+  injectable: ^1.0.2
+  get_it: ^4.0.4
 
   # Router
-  auto_route: ^0.6.1
+  auto_route: ^0.6.6
 
   # Generators
   freezed_annotation: ^0.11.0
@@ -54,15 +53,15 @@ dev_dependencies:
     sdk: flutter
 
   # Testing
-  bloc_test: ^6.0.0
+  bloc_test: ^7.0.0
   mockito: ^4.1.1
 
   # Generators
-  injectable_generator: ^0.4.1
-  auto_route_generator: ^0.6.0
+  injectable_generator: ^1.0.2
+  auto_route_generator: ^0.6.6
   json_serializable: ^3.3.0
   build_runner: ^1.10.0
-  freezed: ^0.11.2
+  freezed: ^0.11.4
 
   # Utilities
   pedantic: ^1.9.0

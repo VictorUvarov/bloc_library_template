@@ -4,11 +4,12 @@
 // AutoRouteGenerator
 // **************************************************************************
 
-import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
+// ignore_for_file: public_member_api_docs
+
 import 'package:auto_route/auto_route.dart';
-import 'package:bloc_library_template/ui/views/home/home_view.dart';
-import 'package:bloc_library_template/ui/views/details/details_view.dart';
+
+import 'views/details/details_view.dart';
+import 'views/home/home_view.dart';
 
 class Routes {
   static const String homeView = '/';
@@ -29,59 +30,27 @@ class Router extends RouterBase {
   @override
   Map<Type, AutoRouteFactory> get pagesMap => _pagesMap;
   final _pagesMap = <Type, AutoRouteFactory>{
-    HomeView: (RouteData data) {
-      var args =
-          data.getArgs<HomeViewArguments>(orElse: () => HomeViewArguments());
+    HomeView: (data) {
       return buildAdaptivePageRoute<dynamic>(
-        builder: (context) => HomeView(key: args.key),
+        builder: (context) => const HomeView(),
         settings: data,
       );
     },
-    DetailsView: (RouteData data) {
-      var args = data.getArgs<DetailsViewArguments>(
-          orElse: () => DetailsViewArguments());
+    DetailsView: (data) {
       return buildAdaptivePageRoute<dynamic>(
-        builder: (context) => DetailsView(key: args.key),
+        builder: (context) => const DetailsView(),
         settings: data,
       );
     },
   };
 }
 
-// *************************************************************************
-// Navigation helper methods extension
-// **************************************************************************
+/// ************************************************************************
+/// Navigation helper methods extension
+/// *************************************************************************
 
-extension RouterNavigationHelperMethods on ExtendedNavigatorState {
-  Future<dynamic> pushHomeView({
-    Key key,
-  }) =>
-      pushNamed<dynamic>(
-        Routes.homeView,
-        arguments: HomeViewArguments(key: key),
-      );
+extension RouterExtendedNavigatorStateX on ExtendedNavigatorState {
+  Future<dynamic> pushHomeView() => push<dynamic>(Routes.homeView);
 
-  Future<dynamic> pushDetailsView({
-    Key key,
-  }) =>
-      pushNamed<dynamic>(
-        Routes.detailsView,
-        arguments: DetailsViewArguments(key: key),
-      );
-}
-
-// *************************************************************************
-// Arguments holder classes
-// **************************************************************************
-
-//HomeView arguments holder class
-class HomeViewArguments {
-  final Key key;
-  HomeViewArguments({this.key});
-}
-
-//DetailsView arguments holder class
-class DetailsViewArguments {
-  final Key key;
-  DetailsViewArguments({this.key});
+  Future<dynamic> pushDetailsView() => push<dynamic>(Routes.detailsView);
 }
