@@ -2,6 +2,10 @@ import 'package:bloc_library_template/generated/l10n.dart';
 import 'package:flutter/material.dart';
 
 class DetailsView extends StatelessWidget {
+  static Route route() {
+    return MaterialPageRoute<void>(builder: (_) => DetailsView());
+  }
+
   const DetailsView({Key key}) : super(key: key);
 
   @override
@@ -11,10 +15,7 @@ class DetailsView extends StatelessWidget {
         title: Text(S.of(context).detailsViewTitle),
       ),
       body: SizedBox.expand(
-        child: Image.network(
-          'https://images.pexels.com/photos/716398/pexels-photo-716398.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-          fit: BoxFit.cover,
-        ),
+        child: Image.network('https://picsum.photos/500/500'),
       ),
     );
   }
