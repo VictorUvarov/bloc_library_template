@@ -12,6 +12,7 @@ User _$UserFromJson(Map<String, dynamic> json) {
   return _User.fromJson(json);
 }
 
+/// @nodoc
 class _$UserTearOff {
   const _$UserTearOff();
 
@@ -26,11 +27,18 @@ class _$UserTearOff {
       fullName: fullName,
     );
   }
+
+// ignore: unused_element
+  User fromJson(Map<String, Object> json) {
+    return User.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $User = _$UserTearOff();
 
+/// @nodoc
 mixin _$User {
   String get id;
   DateTime get created;
@@ -41,12 +49,14 @@ mixin _$User {
   $UserCopyWith<User> get copyWith;
 }
 
+/// @nodoc
 abstract class $UserCopyWith<$Res> {
   factory $UserCopyWith(User value, $Res Function(User) then) =
       _$UserCopyWithImpl<$Res>;
   $Res call({String id, DateTime created, @nullable String fullName});
 }
 
+/// @nodoc
 class _$UserCopyWithImpl<$Res> implements $UserCopyWith<$Res> {
   _$UserCopyWithImpl(this._value, this._then);
 
@@ -68,6 +78,7 @@ class _$UserCopyWithImpl<$Res> implements $UserCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$UserCopyWith<$Res> implements $UserCopyWith<$Res> {
   factory _$UserCopyWith(_User value, $Res Function(_User) then) =
       __$UserCopyWithImpl<$Res>;
@@ -75,6 +86,7 @@ abstract class _$UserCopyWith<$Res> implements $UserCopyWith<$Res> {
   $Res call({String id, DateTime created, @nullable String fullName});
 }
 
+/// @nodoc
 class __$UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
     implements _$UserCopyWith<$Res> {
   __$UserCopyWithImpl(_User _value, $Res Function(_User) _then)
@@ -98,6 +110,8 @@ class __$UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_User implements _User {
   const _$_User(
       {@required this.id, @required this.created, @nullable this.fullName = ''})

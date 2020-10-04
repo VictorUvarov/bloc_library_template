@@ -4,7 +4,6 @@ import 'package:bloc/bloc.dart';
 import 'package:bloc_library_template/core/exceptions/repository/repository_exception.dart';
 import 'package:bloc_library_template/core/models/user/user.dart';
 import 'package:bloc_library_template/core/repositories/users/users_repository.dart';
-import 'package:bloc_library_template/locator.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:meta/meta.dart';
 
@@ -13,9 +12,12 @@ part 'home_view_event.dart';
 part 'home_view_state.dart';
 
 class HomeViewBloc extends Bloc<HomeViewEvent, HomeViewState> {
-  final UsersRepository _usersRepository = locator<UsersRepository>();
+  final UsersRepository _usersRepository;
 
-  HomeViewBloc() : super(HomeViewState.loading());
+  HomeViewBloc({
+    @required UsersRepository usersRepository,
+  })  : _usersRepository = usersRepository,
+        super(HomeViewState.loading());
 
   @override
   Stream<HomeViewState> mapEventToState(

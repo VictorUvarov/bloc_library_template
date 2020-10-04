@@ -9,6 +9,7 @@ part of 'repository_exception.dart';
 
 T _$identity<T>(T value) => value;
 
+/// @nodoc
 class _$RepositoryExceptionTearOff {
   const _$RepositoryExceptionTearOff();
 
@@ -23,9 +24,11 @@ class _$RepositoryExceptionTearOff {
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $RepositoryException = _$RepositoryExceptionTearOff();
 
+/// @nodoc
 mixin _$RepositoryException {
   @optionalTypeArgs
   Result when<Result extends Object>({
@@ -51,12 +54,14 @@ mixin _$RepositoryException {
   });
 }
 
+/// @nodoc
 abstract class $RepositoryExceptionCopyWith<$Res> {
   factory $RepositoryExceptionCopyWith(
           RepositoryException value, $Res Function(RepositoryException) then) =
       _$RepositoryExceptionCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$RepositoryExceptionCopyWithImpl<$Res>
     implements $RepositoryExceptionCopyWith<$Res> {
   _$RepositoryExceptionCopyWithImpl(this._value, this._then);
@@ -66,11 +71,13 @@ class _$RepositoryExceptionCopyWithImpl<$Res>
   final $Res Function(RepositoryException) _then;
 }
 
+/// @nodoc
 abstract class _$GeneralCopyWith<$Res> {
   factory _$GeneralCopyWith(_General value, $Res Function(_General) then) =
       __$GeneralCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class __$GeneralCopyWithImpl<$Res>
     extends _$RepositoryExceptionCopyWithImpl<$Res>
     implements _$GeneralCopyWith<$Res> {
@@ -81,6 +88,7 @@ class __$GeneralCopyWithImpl<$Res>
   _General get _value => super._value as _General;
 }
 
+/// @nodoc
 class _$_General implements _General {
   const _$_General();
 
@@ -152,12 +160,14 @@ abstract class _General implements RepositoryException {
   const factory _General() = _$_General;
 }
 
+/// @nodoc
 abstract class _$ServerErrorCopyWith<$Res> {
   factory _$ServerErrorCopyWith(
           _ServerError value, $Res Function(_ServerError) then) =
       __$ServerErrorCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class __$ServerErrorCopyWithImpl<$Res>
     extends _$RepositoryExceptionCopyWithImpl<$Res>
     implements _$ServerErrorCopyWith<$Res> {
@@ -169,6 +179,7 @@ class __$ServerErrorCopyWithImpl<$Res>
   _ServerError get _value => super._value as _ServerError;
 }
 
+/// @nodoc
 class _$_ServerError implements _ServerError {
   const _$_ServerError();
 

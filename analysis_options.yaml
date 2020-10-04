@@ -1,1 +1,17 @@
 include: package:pedantic/analysis_options.yaml
+
+analyzer:
+  exclude:
+    - build/**
+    - lib/**.freezed.dart
+    - lib/**.g.dart
+    - lib/generated/**.dart
+  errors:
+    missing_required_param: error
+
+linter:
+  rules:
+    public_member_api_docs: false
+    sort_constructors_first: false
+    lines_longer_than_80_chars: false
+    use_key_in_widget_constructors: true
