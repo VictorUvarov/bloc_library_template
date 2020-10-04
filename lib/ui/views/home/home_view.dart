@@ -9,7 +9,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 class HomeView extends StatelessWidget {
   static Route route() {
-    return MaterialPageRoute<void>(builder: (_) => HomeView());
+    return MaterialPageRoute<void>(
+      builder: (_) => HomeView(),
+      settings: RouteSettings(name: 'HomeView'),
+    );
   }
 
   const HomeView({Key key}) : super(key: key);

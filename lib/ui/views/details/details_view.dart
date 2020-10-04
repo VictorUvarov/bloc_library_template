@@ -3,7 +3,10 @@ import 'package:flutter/material.dart';
 
 class DetailsView extends StatelessWidget {
   static Route route() {
-    return MaterialPageRoute<void>(builder: (_) => DetailsView());
+    return MaterialPageRoute<void>(
+      builder: (_) => DetailsView(),
+      settings: RouteSettings(name: 'DetailsView'),
+    );
   }
 
   const DetailsView({Key key}) : super(key: key);
